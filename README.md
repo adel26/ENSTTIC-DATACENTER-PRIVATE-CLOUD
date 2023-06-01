@@ -8,8 +8,7 @@ projects, the instances, the network...
 
 ### Ceph installation 
 Based on the architecture we decided to manually install Ceph on the three nodes that will be running Openstack services later, we will be making all three nodes Ceph monitors, each of them contain 3 OSDs each , 'server1' and 'server3' will run manager service as active-standby mechanism.
-![alt text](https://github.com/adel26/ENSTTIC-DATACENTER-PRIVATE-CLOUD
-/blob/main/cephdesign.png?raw=true)
+![alt text](https://github.com/adel26/ENSTTIC-DATACENTER-PRIVATE-CLOUD/blob/main/cephdesign.png?raw=true)
 ### Choice of the Ceph version
 For the version of Ceph to be deployed, we opted for an older and more stable version which is the Pacific version (16.2) released in 2021.
 ### Choice of the Linux distribution
