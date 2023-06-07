@@ -28,7 +28,7 @@ First we will create a ceph configuration file.
 sudo vi /etc/ceph/ceph.conf
 ```
 
-The most important things to specify is the id and ips of our cluster monitors. A unique cluster id that we will reuse for all your nodes. And lastly a public network range that we want our monitors to be available over. The cluster network is a good addition if you have the resources to route the recovery traffic on a backbone network.
+The most important things to specify is the id and all the ip of our cluster monitors. A unique cluster id that we will reuse for all your nodes. And lastly a public network range that we want our monitors to be available over. The cluster network is a good addition if you have the resources to route the recovery traffic on a backbone network.
 ```
 [global]
 fsid = {cluster uuid}
