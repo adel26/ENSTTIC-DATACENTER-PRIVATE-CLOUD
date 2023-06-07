@@ -37,3 +37,17 @@ all nodes for administrative tasks like package installation via a public ip fro
 10.0.0.0/24 for internal network communication among services (network management),
 while assigning the responsibility of facilitating Internet access to the other network
 interface
+### Lab automation with Terraform
+We decided to simulate a simple example for lab management using automation with
+Terraform, the scenario is that the teacher want to do a lab exam, he will create some
+instances and give access to the students for these instances so they can do their work
+on. after the exam time expires the teacher will take away the access form the student
+so that he will consult each instance later to evaluate each student.
+
+Then when we need to close the lab we simply change the security group of the instance
+(which allows the access via SSH, RDP and other protocols) to a prepared security group
+which will deny any ingress or egress traﬀic so that any access to the instance is lost, for
+that we created a security group called ”Lab-end”, deny every traﬀic rule, and we made a
+script to change the security group of the created instance from ”Default” to ”Lab-end”.
+Finally when the teacher want to consult the instances, he just has to launch the script
+to put them back to the ”Default” security group to get the access back.
